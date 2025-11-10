@@ -1,13 +1,13 @@
-
 namespace SistemaDeVeiculosComMVC.Models
 {
-  public class Carro : Veiculo
+    public class Carro : Veiculo
     {
-        public Carro(string Modelo, int Ano) : base(Modelo, Ano) { }
+        public Carro() : base() {}
 
-        public override double CalcularRevisao()
-        {
-            return 500.0; 
-        }
+        public Carro(string modelo, int ano) : base(modelo, ano) {}
+
+        public Carro(string modelo, int ano, double revisaoBase) : base(modelo, ano, revisaoBase) {}
+
+        public override double CalcularRevisao() => 500;
     }
 }

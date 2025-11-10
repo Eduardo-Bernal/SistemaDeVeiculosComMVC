@@ -1,12 +1,13 @@
 namespace SistemaDeVeiculosComMVC.Models
 {
-     public class Moto : Veiculo
+    public class Moto : Veiculo
     {
-        public Moto(string Modelo, int Ano) : base(Modelo, Ano) { }
+        public Moto() : base() {}
 
-        public override double CalcularRevisao()
-        {
-            return 300.0; // custo fixo da revisão
-        }
+        public Moto(string modelo, int ano) : base(modelo, ano) {}
+
+        public Moto(string modelo, int ano, double revisaoBase) : base(modelo, ano, revisaoBase) {}
+
+        public override double CalcularRevisao() => 300;
     }
 }

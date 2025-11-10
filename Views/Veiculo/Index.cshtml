@@ -1,5 +1,3 @@
-@model List<SistemaVeiculosMVC.Models.Veiculo>
-
 <h2>Veículos</h2>
 
 <a asp-action="Criar" class="btn btn-primary">Novo Veículo</a>
@@ -8,15 +6,20 @@
     <tr>
         <th>Modelo</th>
         <th>Ano</th>
+        <th>Tipo</th>
+        <th>Custo Revisão</th>
         <th>Ações</th>
     </tr>
-    @foreach(var v in Model)
+
+    @foreach (var veiculo in Model)
     {
         <tr>
-            <td>@v.Modelo</td>
-            <td>@v.Ano</td>
+            <td>@veiculo.Modelo</td>
+            <td>@veiculo.Ano</td>
+            <td>@veiculo.GetType().Name</td>
+            <td>R$ @veiculo.Revisao</td> @* valor salvo no BD *@
             <td>
-                <a asp-action="Deletar" asp-route-id="@v.Id" class="btn btn-danger">Excluir</a>
+                <a asp-action="Deletar" asp-route-id="@veiculo.Id" class="btn btn-danger">Excluir</a>
             </td>
         </tr>
     }

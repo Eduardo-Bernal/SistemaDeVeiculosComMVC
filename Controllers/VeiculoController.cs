@@ -1,10 +1,6 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using SistemaDeVeiculosComMVC.Data;
-using Microsoft.AspNetCore.Mvc;
 using SistemaDeVeiculosComMVC.Models;
 
 namespace SistemaDeVeiculosComMVC.Controllers
@@ -18,31 +14,35 @@ namespace SistemaDeVeiculosComMVC.Controllers
             _context = context;
         }
 
-        // GET: Veiculo
         public async Task<IActionResult> Index()
         {
             var lista = await _context.TabelaVeiculo.ToListAsync();
             return View(lista);
         }
 
-        // GET: Veiculo/Criar
         public IActionResult Criar()
         {
             return View();
         }
 
-        // POST: Veiculo/Criar
         [HttpPost]
-        public async Task<IActionResult> Criar(Veiculo veiculo)
+        public async Task<IActionResult> Criar(string modelo, int ano, string tipo)
         {
-            if (!ModelState.IsValid) return View(veiculo);
+            Veiculo veiculo;
+
+            if (tipo == "Carro")
+                veiculo = new Carro(modelo, ano);
+            else
+                veiculo = new Moto(modelo, ano);
+
+            veiculo.Revisao = veiculo.CalcularRevisao(); // ✅ salva no banco
 
             _context.TabelaVeiculo.Add(veiculo);
             await _context.SaveChangesAsync();
+
             return RedirectToAction("Index");
         }
 
-        // GET: Veiculo/Deletar/5
         public async Task<IActionResult> Deletar(int id)
         {
             var veiculo = await _context.TabelaVeiculo.FindAsync(id);

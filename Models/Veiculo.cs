@@ -4,32 +4,42 @@ namespace SistemaDeVeiculosComMVC.Models
 {
     public abstract class Veiculo
     {
-        [Key] 
+        [Key]
         public int Id { get; set; }
 
-        [Required] 
+        [Required]
         public string Modelo { get; set; } = string.Empty;
 
-        [Range(1880, 2100)] 
+        [Range(1880, 2100)]
         public int Ano { get; set; }
 
-        
+        [Range(0, 10000)]
+        public double RevisaoBase { get; set; }
+
+       
+        public double Revisao { get; set; }
+
+       
         public Veiculo() { }
 
-              public Veiculo(string modeloConstrutor, int anoConstrutor)
+        
+        public Veiculo(string modeloConstrutor, int anoConstrutor)
         {
             Modelo = modeloConstrutor;
             Ano = anoConstrutor;
+
+            
+            RevisaoBase = 0;
         }
 
-        
-        public abstract double CalcularRevisao();
-
-        
-        public virtual void ExibirResumo()
+       
+        public Veiculo(string modeloConstrutor, int anoConstrutor, double revisaoBaseConstrutor)
         {
-            Console.WriteLine($"Modelo: {Modelo}");
-            Console.WriteLine($"Ano: {Ano}");
+            Modelo = modeloConstrutor;
+            Ano = anoConstrutor;
+            RevisaoBase = revisaoBaseConstrutor;
         }
+
+        public abstract double CalcularRevisao();
     }
 }
