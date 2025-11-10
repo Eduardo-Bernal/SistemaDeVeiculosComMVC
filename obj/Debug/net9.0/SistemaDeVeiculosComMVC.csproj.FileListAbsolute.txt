@@ -1,0 +1,5 @@
+C:\Users\44438098807\Desktop\SistemaDeVeiculosComMVC\obj\Debug\net9.0\SistemaDeVeiculosComMVC.csproj.AssemblyReference.cache
+C:\Users\44438098807\Desktop\SistemaDeVeiculosComMVC\obj\Debug\net9.0\SistemaDeVeiculosComMVC.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\44438098807\Desktop\SistemaDeVeiculosComMVC\obj\Debug\net9.0\SistemaDeVeiculosComMVC.AssemblyInfoInputs.cache
+C:\Users\44438098807\Desktop\SistemaDeVeiculosComMVC\obj\Debug\net9.0\SistemaDeVeiculosComMVC.AssemblyInfo.cs
+C:\Users\44438098807\Desktop\SistemaDeVeiculosComMVC\obj\Debug\net9.0\SistemaDeVeiculosComMVC.csproj.CoreCompileInputs.cache

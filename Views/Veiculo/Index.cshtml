@@ -1,0 +1,23 @@
+@model List<SistemaVeiculosMVC.Models.Veiculo>
+
+<h2>Veículos</h2>
+
+<a asp-action="Criar" class="btn btn-primary">Novo Veículo</a>
+
+<table class="table mt-3">
+    <tr>
+        <th>Modelo</th>
+        <th>Ano</th>
+        <th>Ações</th>
+    </tr>
+    @foreach(var v in Model)
+    {
+        <tr>
+            <td>@v.Modelo</td>
+            <td>@v.Ano</td>
+            <td>
+                <a asp-action="Deletar" asp-route-id="@v.Id" class="btn btn-danger">Excluir</a>
+            </td>
+        </tr>
+    }
+</table>

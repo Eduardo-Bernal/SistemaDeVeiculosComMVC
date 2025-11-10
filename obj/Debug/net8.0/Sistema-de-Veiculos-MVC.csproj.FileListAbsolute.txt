@@ -1,0 +1,5 @@
+C:\Users\44438098807\Desktop\Sistema-de-Veiculos-MVC\obj\Debug\net8.0\Sistema-de-Veiculos-MVC.csproj.AssemblyReference.cache
+C:\Users\44438098807\Desktop\Sistema-de-Veiculos-MVC\obj\Debug\net8.0\Sistema-de-Veiculos-MVC.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\44438098807\Desktop\Sistema-de-Veiculos-MVC\obj\Debug\net8.0\Sistema-de-Veiculos-MVC.AssemblyInfoInputs.cache
+C:\Users\44438098807\Desktop\Sistema-de-Veiculos-MVC\obj\Debug\net8.0\Sistema-de-Veiculos-MVC.AssemblyInfo.cs
+C:\Users\44438098807\Desktop\Sistema-de-Veiculos-MVC\obj\Debug\net8.0\Sistema-de-Veiculos-MVC.csproj.CoreCompileInputs.cache
