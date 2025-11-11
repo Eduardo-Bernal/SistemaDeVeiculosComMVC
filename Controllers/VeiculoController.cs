@@ -35,7 +35,7 @@ namespace SistemaDeVeiculosComMVC.Controllers
             else
                 veiculo = new Moto(modelo, ano);
 
-            veiculo.Revisao = veiculo.CalcularRevisao(); // ✅ salva no banco
+            veiculo.Revisao = veiculo.CalcularRevisao();
 
             _context.TabelaVeiculo.Add(veiculo);
             await _context.SaveChangesAsync();
